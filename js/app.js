@@ -32,6 +32,14 @@ const createAnimalListItem = function (form) {
   continent.textContent = form.continent.value;
   animalListItem.appendChild(continent);
 
+  if (form.critical.value === 'critical') {
+    animalListItem.classList.add('critical');
+    const critical = document.createElement('p');
+    critical.textContent = 'Critical';
+    animalListItem.appendChild(critical);
+  };
+
+
   return animalListItem;
 }
 
